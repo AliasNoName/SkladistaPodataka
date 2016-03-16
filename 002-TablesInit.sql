@@ -4,7 +4,8 @@ go
 Create table [dbo].[Dobavljac] (
 	Id int not null primary key identity,
 	Ime nvarchar(max) not null,
-	Racun nvarchar(max) not null
+	IBAN nvarchar(max) not null,
+	Kontakt nvarchar(max) not null
 )
 go
 
@@ -41,6 +42,7 @@ Create table [dbo].[ArtikliSkladista] (
 	Id int not null primary key identity,
 	Kolicina int,
 	MinKolicina int,
+	OptimalnaKolicina int,
 
 	FK_IdArtikal int not null references Artikal(Id),
 	FK_IdSkladiste int references Skladiste(Id)
@@ -69,7 +71,7 @@ Create table [dbo].[ListaZaNarudzbe] (
 )
 go
 
-Create table [dbo].[PovijestNabaveArtikla] (
+Create table [dbo].[NarudzbaDobavljacu] (
 	Id int not null primary key identity,
 	DatumNarudzbe datetime2 not null,
 	Cijena float not null,
