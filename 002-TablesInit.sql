@@ -4,14 +4,14 @@ go
 Create table [dbo].[Dobavljac] (
 	Id int not null primary key identity,
 	Ime nvarchar(max) not null,
-	IBAN nvarchar(max) not null,
+	IBAN nvarchar(max) not null unique,
 	Kontakt nvarchar(max) not null
 )
 go
 
 Create table [dbo].[Skladiste] (
 	Id int not null primary key identity,
-	Ime nvarchar(max) not null,
+	Ime nvarchar(max) not null ,
 	Lokacija nvarchar(max)
 )
 go
@@ -20,7 +20,7 @@ Create table [dbo].[Artikal] (
 	Id int not null primary key identity,
 	Ime nvarchar(max) not null,
 
-	FK_IdDobavljac int not null references Dobavljac(Id)
+	FK_IdDobavljac int not null references Dobavljac(Id) on delete no action
 )
 go
 
@@ -44,8 +44,8 @@ Create table [dbo].[ArtikliSkladista] (
 	MinKolicina int,
 	OptimalnaKolicina int,
 
-	FK_IdArtikal int not null references Artikal(Id),
-	FK_IdSkladiste int references Skladiste(Id)
+	FK_IdArtikal int not null references Artikal(Id) on delete no action,
+	FK_IdSkladiste int references Skladiste(Id) on delete no action
 )
 go
 
@@ -56,9 +56,9 @@ Create table [dbo].[NarudzbaZaKafic] (
 	StatusNarudzbe int not null,
 	VrijemeDostave datetime2,
 
-	FK_IdKafic int not null references Kafic(Id),
-	FK_IdKorisnik int not null references Korisnik(Id),
-	FK_IdSkladiste int references Skladiste(Id)
+	FK_IdKafic int not null references Kafic(Id) on delete no action,
+	FK_IdKorisnik int not null references Korisnik(Id) on delete no action,
+	FK_IdSkladiste int references Skladiste(Id) on delete no action
 )
 go
 
@@ -66,8 +66,8 @@ Create table [dbo].[ListaZaNarudzbe] (
 	Id int not null primary key identity,
 	Kolicina int not null,
 
-	FK_IdArtikal int not null references Artikal(Id),
-	FK_IdNarudzbaZaKafic int not null references NarudzbaZaKafic(Id)
+	FK_IdArtikal int not null references Artikal(Id) on delete no action,
+	FK_IdNarudzbaZaKafic int not null references NarudzbaZaKafic(Id) on delete no action
 )
 go
 
@@ -78,7 +78,7 @@ Create table [dbo].[NarudzbaDobavljacu] (
 	Valuta nvarchar(3),
 	Kolicina int not null,
 
-	FK_IdArtikal int not null references Artikal(Id),
-	FK_IdDobavljac int not null references Dobavljac(Id)
+	FK_IdArtikal int not null references Artikal(Id) on delete no action,
+	FK_IdDobavljac int not null references Dobavljac(Id) on delete no action
 )
 go
