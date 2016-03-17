@@ -44,6 +44,8 @@ insert into [dbo].[Artikal]
 			('Zavjese Clover', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
 			('Pepeljare', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
 			('Case Vinske Inge', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
+			('Case Shooteri Texas', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA'))
+go
 
 INSERT INTO [dbo].[Kafic]
            ([Ime],[Lokacija])
