@@ -1,4 +1,4 @@
-use SkladistaPodataka
+use [SkladistaPodataka]
 go
 
 Create table [dbo].[Dobavljac] (

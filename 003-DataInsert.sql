@@ -1,4 +1,4 @@
-USE SladistaPodataka
+USE [SkladistaPodataka]
 GO
 
 insert into [dbo].[Dobavljac]
