@@ -1,2 +1,2 @@
-Create database SladistaPodataka
+Create database SkladistaPodataka
 go

@@ -1,10 +1,10 @@
-use SladistaPodataka
+use SkladistaPodataka
 go
 
 Create table [dbo].[Dobavljac] (
 	Id int not null primary key identity,
 	Ime nvarchar(max) not null,
-	IBAN nvarchar(max) not null unique,
+	IBAN nvarchar(max) not null,
 	Kontakt nvarchar(max) not null
 )
 go

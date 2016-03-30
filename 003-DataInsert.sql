@@ -1,8 +1,8 @@
-USE [SladistaPodataka]
+USE SladistaPodataka
 GO
 
 insert into [dbo].[Dobavljac]
-				([Ime],[Racun], [Kontakt])
+				([Ime],[IBAN], [Kontakt])
 	VALUES
 			('Velpro',	'HR12345678907345',	'test1@mail.com'),
 			('Ledo',	'HR23502209742341',	'test2@mail.com'),
@@ -60,5 +60,53 @@ INSERT INTO [dbo].[Kafic]
 		   ('Salona','Klis')
 GO
 
+insert into [dbo].[Korisnik]
+				([Ime], [Mobitel])
+		VALUES
+					('Ante', '091 123 4567'),
+					('Mate', '092 123 4567'),
+					('Ivan', '098 123 4567'),
+					('Luka', '099 123 4567'),
+					('Filip', '095 123 4567'),
+					('Josip', '091 555 5555'),
+					('Marko', '099 345 6789'),
+					('Petar', '097 987 6543')
+GO		
 
+insert into [dbo].[ArtikliSkladista]
+				([Kolicina],[MinKolicina],[OptimalnaKolicina],[FK_IdArtikal],[FK_IdSkladiste])
+		VALUES		
+					('60','20','100',(select Id from [dbo].[Artikal] where Ime='Coca Cola'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+					('45','20','100',(select Id from [dbo].[Artikal] where Ime='Pipi'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+					('21','20','100',(select Id from [dbo].[Artikal] where Ime='Fanta'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+					('34','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica Sensation'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
 
+					('40','20','100',(select Id from [dbo].[Artikal] where Ime='Coca Cola'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+					('67','20','100',(select Id from [dbo].[Artikal] where Ime='Pipi'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+					('21','20','100',(select Id from [dbo].[Artikal] where Ime='Fanta'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+					('34','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica Sensation'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+
+					('52','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
+					('10','2','15',(select Id from [dbo].[Artikal] where Ime='Sladoled Vanilija'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
+
+					
+					('52','20','65',(select Id from [dbo].[Artikal] where Ime='Jamnica'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
+					('10','2','15',(select Id from [dbo].[Artikal] where Ime='Sladoled Vanilija'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
+					('10','2','15',(select Id from [dbo].[Artikal] where Ime='King'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
+					('10','5','2',(select Id from [dbo].[Artikal] where Ime='Kinder Pingui'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto'))
+GO
+
+insert into [dbo].[NarudzbaZaKafic]
+				([VrijemeKreiranja],[StatusNarudzbe],[VrijemeDostave],[FK_IdKafic],[FK_IdKorisnik],[FK_IdSkladiste])
+		VALUES
+			('2016-02-03 15:10:44', '2','2016-02-07 10:44:02',(select Id from [dbo].[Kafic] where Ime='Marina'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+			('2016-02-03 15:11:44', '2','2016-02-07 10:44:30',(select Id from [dbo].[Kafic] where Ime='Marina'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+			('2016-03-03 12:10:44', '2','2016-03-07 14:10:55',(select Id from [dbo].[Kafic] where Ime='East 1'),(select Id from [dbo].[Korisnik] where Ime='Luka'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+
+			('2016-03-22 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='Blue'),(select Id from [dbo].[Korisnik] where Ime='Mate'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+			('2016-02-03 15:10:44', '0','',(select Id from [dbo].[Kafic] where Ime='Salona'),(select Id from [dbo].[Korisnik] where Ime='Josip'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+			('2016-02-03 15:10:44', '0','',(select Id from [dbo].[Kafic] where Ime='Maduro'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+
+			('2016-03-20 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='Salona'),(select Id from [dbo].[Korisnik] where Ime='Marko'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
+			('2016-03-21 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='City One'),(select Id from [dbo].[Korisnik] where Ime='Ivan'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto'))
+GO
