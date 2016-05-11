@@ -110,3 +110,31 @@ insert into [dbo].[NarudzbaZaKafic]
 			('2016-03-20 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='Salona'),(select Id from [dbo].[Korisnik] where Ime='Marko'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
 			('2016-03-21 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='City One'),(select Id from [dbo].[Korisnik] where Ime='Ivan'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto'))
 GO
+
+insert into [dbo].[ListaZaNarudzbe]
+	([Kolicina],[FK_IdArtikal],[FK_IdNarudzbaZaKafic])
+	values
+		(5,1,1),
+		(2,3,1),
+		(1,5,1),
+		(4,3,2),
+		(4,6,2),
+		(5,5,3),
+		(3,1,3),
+
+		(5,1,4),
+		(2,6,4),
+		(1,5,4),
+		(4,1,5),
+		(4,6,5),
+		(5,5,6),
+		(3,1,6),
+
+		(5,2,7),
+		(2,7,7),
+
+		(5,2,8),
+		(1,10,8),
+		(2,7,8)
+
+go
