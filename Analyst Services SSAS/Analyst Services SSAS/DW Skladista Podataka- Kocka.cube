@@ -1,0 +1,852 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="716cf131-9901-41d0-9358-ae474afd6b96" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Skladista Podataka- Kocka</ID>
+  <Name>DW Skladista Podataka- Kocka</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3598" scrolltop="3798" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="5583" y="7144" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Artikal" left="8221" top="14219" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Artikal" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Korisnik" left="20" top="8458" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Korisnik" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="5169" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000780e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Kafic" left="11021" top="8458" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Kafic" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactTable" left="5420" top="7400" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3201" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000810c000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactTable" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Skladiste" left="2821" top="14219" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Skladiste" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7270" top="11519" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="2851" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactTable__FK_Id__1920BF5C]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9721" y="14219" />
+              <point x="9721" y="13019" />
+              <point x="7570" y="13019" />
+              <point x="7570" y="11819" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="9210" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactTable__FK_Id__1B0907CE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="13" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="9609" />
+              <point x="5420" y="9609" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6622" top="4501" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactTable__FK_ID__1CF15040]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7021" y="5000" />
+              <point x="7021" y="6200" />
+              <point x="7020" y="6200" />
+              <point x="7020" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8321" top="9210" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactTable__FK_Id__1A14E395]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11021" y="9609" />
+              <point x="8621" y="9609" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3922" top="11519" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="2298" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__FactTable__FK_Id__1BFD2C07]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="4" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4321" y="14219" />
+              <point x="4321" y="13019" />
+              <point x="5920" y="13019" />
+              <point x="5920" y="11819" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>3598</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>3798</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="f47ac764-febc-4d1d-b0bd-5f5f26369278">
+      <ID>Artikal</ID>
+      <Name>Artikal</Name>
+      <DimensionID>Artikal</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b1040601-2071-4949-87ff-0b3cc1af3459">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0a4f5ec-dd68-4aa5-b1c9-5bc1e5919942">
+          <AttributeID>Ime Artikal</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e63e2e9a-e310-4d47-9aa0-e9ff59914372">
+          <AttributeID>Old ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="6686f131-034b-4777-a75f-f5ae097c4c3c">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="8318e8d8-d686-4194-aedf-c703edf21840">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4f87fa2d-75f6-4d83-9648-4904c5a616ab">
+          <AttributeID>Date Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d49393ef-5398-4b18-9602-1aa4c9d2a5c5">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0c5e4ea1-365e-4766-a9c3-4d76e4dba53b">
+          <AttributeID>Date Name EU</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="62bc4ae9-62ce-4118-aa41-bd91e87cf756">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="db0457f6-86cb-46af-9678-73f1cc90e24d">
+      <ID>Kafic</ID>
+      <Name>Kafic</Name>
+      <DimensionID>Kafic</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8a89ed53-1a86-441e-ba86-f89058d391e0">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc523fab-0f1f-4092-86a8-bd51d51b825d">
+          <AttributeID>Ime Kafic</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5f7c2f3-8efa-48e2-9ad4-7a2c5cbf087f">
+          <AttributeID>Old ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="5c87bc0f-3ce8-4267-999b-a70dbc52d903">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="ce697d03-b243-4365-97c0-d2cbef518e74">
+      <ID>Korisnik</ID>
+      <Name>Korisnik</Name>
+      <DimensionID>Korisnik</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8da3ebc8-a38b-4d55-91bf-5392db65dcc7">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c918a41-3203-4a07-9908-50ef137676a7">
+          <AttributeID>Ime Korisnik</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a265a00-33d2-41a0-b4ff-b9c54798db38">
+          <AttributeID>Old ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="ba723694-dcf3-4c1f-9917-34a68fce8b72">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="5c4ed7d0-1326-4dc4-8d74-f5d9f2870265">
+      <ID>Skladiste</ID>
+      <Name>Skladiste</Name>
+      <DimensionID>Skladiste</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c0f29542-8a4a-4901-adfd-0c853b903587">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c47b9110-a313-4fbe-887b-44b729b23a29">
+          <AttributeID>Ime Skladiste</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0227aa6c-7b8f-4703-9c97-636d1a713691">
+          <AttributeID>Old ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="94d40e12-6a52-4dca-8dde-c6ad5ac5bb20">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="cc108282-f57a-426c-944b-beeff1c7da0d">
+      <ID>Fact Table</ID>
+      <Name>Fact Table</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d1480735-d47b-4b6d-a53c-6ec72d876e36">
+          <ID>Kolicina</ID>
+          <Name>Kolicina</Name>
+          <Source dwd:design-time-name="a895fd42-0dae-4559-8c25-9269c43bab1a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4b1ffae0-c6bf-4312-a806-22d5df42439b">
+              <TableID>dbo_FactTable</TableID>
+              <ColumnID>Kolicina</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1ec2c3a9-a1ba-42f9-87d7-398b920c1523">
+          <ID>Fact Table Count</ID>
+          <Name>Fact Table Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c7f5999e-d928-49fa-98ef-2999a8421d4b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="e67e2619-9ac8-4491-b31e-595f9df5abb8">
+              <TableID>dbo_FactTable</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4078a7f5-1ede-4762-b316-a3ef88010afe">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4385ea29-59cf-4d85-8fb8-6f338e8b2f50">
+              <AttributeID>Date Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="24a76528-9f66-41a2-8559-f797491f9057">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dc8c1774-96a5-4fbb-a637-4a967291e83f">
+                    <TableID>dbo_FactTable</TableID>
+                    <ColumnID>FK_IDVrijeme</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="927f1276-2a5f-445d-8d4c-9b78a842f5cd">
+          <CubeDimensionID>Korisnik</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="86e78c28-68cc-4654-9ef8-9bef9f0d9a50">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7837d535-dad3-4f7e-bae3-c5258000aff6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="321cc2ef-8fb0-4227-bdb4-bd2a6d05991c">
+                    <TableID>dbo_FactTable</TableID>
+                    <ColumnID>FK_IdKorisnik</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3a6c539b-69c4-421d-9d10-f6d5bd1131a4">
+          <CubeDimensionID>Skladiste</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b88d1f2-f94c-4154-bd42-f18809d0abb9">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17464e13-c236-4a3a-8f76-fff45af22aa9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="357ddc5b-e327-42fb-ab56-e5cbd848008e">
+                    <TableID>dbo_FactTable</TableID>
+                    <ColumnID>FK_IdSkladiste</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5f03f6dc-921c-400c-b796-8be09d0ba756">
+          <CubeDimensionID>Kafic</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2cb8e591-0a31-44b8-a703-9fc59dedf23b">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="75aa04e7-b36e-4ada-b279-47b52420bcb6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eceee3dc-a554-49ea-874c-c54a42793143">
+                    <TableID>dbo_FactTable</TableID>
+                    <ColumnID>FK_IdKafic</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2a4638ab-6a85-436b-a1b4-28278a9bdcc9">
+          <CubeDimensionID>Artikal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="84df8af0-263b-481b-8dae-7301a90d1683">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b1f0403c-3eca-4fa8-8410-bbfb80afa03f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2e8a792b-1e31-41a5-88c9-d573d31a86f7">
+                    <TableID>dbo_FactTable</TableID>
+                    <ColumnID>FK_IdArtikal</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="00aae9b1-78d8-4e04-9530-fda46ef43802">
+      <ID>Artikal</ID>
+      <Name>Artikal</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="719ed118-5dbc-4112-a4d4-f485f76558ad">
+          <ID>Old ID</ID>
+          <Name>Old ID</Name>
+          <Source dwd:design-time-name="40b629d4-0256-4b41-9625-0a5dbaaa33b0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ebffd230-898d-4d96-a657-6125acdc9805">
+              <TableID>dbo_Artikal</TableID>
+              <ColumnID>OldID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="119705b1-d0e2-4a5b-9544-ef1f34233817">
+          <ID>Artikal Count</ID>
+          <Name>Artikal Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="eb05d53b-b68f-4df1-8e3f-fc0c65ffd06a">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="16b4b28a-a1e8-400e-9688-7752918792e1">
+              <TableID>dbo_Artikal</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="f2075553-5db3-44c8-9379-515e51cb2a33">
+          <CubeDimensionID>Artikal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5067f8ea-9422-4b0b-a811-a28dd210fdc4">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a466382f-29c0-44a8-97db-ca6bbf9f52d4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b5d8f72c-255e-44fc-a4c9-5e21a1f49008">
+                    <TableID>dbo_Artikal</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="8e2c561a-2b6e-4edd-8200-5b88747d47ee">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="6773b1ea-c134-4fd4-b31c-5b34fb7dd943">
+          <ID>Day Of Week</ID>
+          <Name>Day Of Week</Name>
+          <Source dwd:design-time-name="46d2800f-d22a-476a-8b8d-20dcb45bc4a6">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d9321936-1ca5-4d80-a904-19b1f3f3b6b7">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>DayOfWeek</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ea23988d-bf50-4e27-a9cb-2f32f76087db">
+          <ID>Day Of Month</ID>
+          <Name>Day Of Month</Name>
+          <Source dwd:design-time-name="eb67620d-ab95-414b-8c64-263cd75699fc">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="644dce43-c8de-441b-94d8-fb84f80b5fdf">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>DayOfMonth</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="12226bd6-e410-485f-a967-f3138112ced5">
+          <ID>Day Of Year</ID>
+          <Name>Day Of Year</Name>
+          <Source dwd:design-time-name="e22af8bc-8fa2-4c72-9252-cba525b6a1e5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="12c38106-b6f8-4289-ab70-2d7bcb20709e">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>DayOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="52d15b90-756e-430a-8766-702199c7dd72">
+          <ID>Week Of Year</ID>
+          <Name>Week Of Year</Name>
+          <Source dwd:design-time-name="a9d21752-e294-4ab5-9065-ce184da810f2">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="587dd09e-5570-4991-9de8-ac78f21d3b7a">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>WeekOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="392f8e34-a5ce-4ba2-86c5-eca87639d1bf">
+          <ID>Month Of Year</ID>
+          <Name>Month Of Year</Name>
+          <Source dwd:design-time-name="7eaf03c7-56b8-435c-a032-9f6f569e2090">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="79962ce2-03b3-49d1-9028-add8253da554">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>MonthOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="845439b0-ff42-40af-b8d9-a13d549e0c29">
+          <ID>Calendar Quarter</ID>
+          <Name>Calendar Quarter</Name>
+          <Source dwd:design-time-name="156c1c41-dca6-40db-a918-74d5f862f302">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="87bfbd40-2765-413f-a838-10d2600e14a9">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>CalendarQuarter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2df99a31-4648-4a67-9ea3-d9e0c6e73d42">
+          <ID>Calendar Year</ID>
+          <Name>Calendar Year</Name>
+          <Source dwd:design-time-name="c45ced1a-c6cd-40f9-b5bf-a0af111fe936">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="82f841fe-dba8-4cfa-b9cb-7a43c39dacc1">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>CalendarYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bd3cc603-2c70-402b-9f67-a8f8f89abb75">
+          <ID>Fiscal Month Of Year</ID>
+          <Name>Fiscal Month Of Year</Name>
+          <Source dwd:design-time-name="e25d3875-c9ad-4602-8408-ea46d363bafe">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="36c3f7b2-9873-43d9-bbf1-db7a0b13c03f">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>FiscalMonthOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8d354c1c-95c6-4b57-ad31-e87d610a0974">
+          <ID>Fiscal Quarter</ID>
+          <Name>Fiscal Quarter</Name>
+          <Source dwd:design-time-name="6cb216e4-e259-4c5c-8f1b-2634bc9e1e07">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="38deea6b-9e86-4e8d-b1af-2f2c33ad079c">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>FiscalQuarter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9d8768b1-f157-4cc8-b82c-b05dcf405490">
+          <ID>Fiscal Year</ID>
+          <Name>Fiscal Year</Name>
+          <Source dwd:design-time-name="231017e2-8fb0-464a-9818-1e29ece06f25">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cc063b5e-1de1-44d8-82a3-7251e76789cb">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>FiscalYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="34e1bbf6-88ba-48df-b663-d5bfd0c7e9e7">
+          <ID>Audit Key</ID>
+          <Name>Audit Key</Name>
+          <Source dwd:design-time-name="c1effcdf-caa1-4196-9de5-02336938a353">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="11d41d6b-2893-41a7-9bd1-dd5d50c7fbbc">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>AuditKey</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b91e543d-c37c-42c1-abe4-0296d3d15044">
+          <ID>Dim Date Count</ID>
+          <Name>Dim Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="51146eea-e623-4611-8fca-54bff717e044">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7dc82d5e-eaea-426e-b6d6-5fc6da123504">
+              <TableID>dbo_DimDate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="b98a82a1-3d6b-4fb5-a437-7b5c05f20ce4">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7b99d758-40e4-4dbb-a1f1-15133150593e">
+              <AttributeID>Date Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f00ab35e-d0ba-47a2-b00b-04b92e19f06f">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="86c81e33-8b35-4d4f-8583-8f62d0f7f0e8">
+                    <TableID>dbo_DimDate</TableID>
+                    <ColumnID>DateKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="366c165d-0495-4442-bb19-917a3d3d328c">
+      <ID>Kafic</ID>
+      <Name>Kafic</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="eae48dfd-3336-4118-b137-6f05995b86d9">
+          <ID>Old ID - Kafic</ID>
+          <Name>Old ID - Kafic</Name>
+          <Source dwd:design-time-name="e5c97e7b-4a6a-4f75-816d-87c831637524">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7a56c00c-f62a-45dd-998e-bf5f5c345775">
+              <TableID>dbo_Kafic</TableID>
+              <ColumnID>OldID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d1efd325-6f47-4cd0-b1da-b75dd86b113c">
+          <ID>Kafic Count</ID>
+          <Name>Kafic Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="742b9c30-81c5-4a58-8eea-b2e03f96ab89">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="e8b74b1e-5cd9-4bc3-b9b7-37b6b06c94cf">
+              <TableID>dbo_Kafic</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="6adaf91e-2825-4111-93b6-940384cf7e02">
+          <CubeDimensionID>Kafic</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a9749a16-f150-40e9-a00b-6dea28b9a480">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="236707cd-09a7-4760-ac4f-1e90c0be2b6c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c183ec2c-4524-4fc5-8cb4-68a9530ea9dd">
+                    <TableID>dbo_Kafic</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="d212124d-147d-40b9-a616-275590e8ca3b">
+      <ID>Korisnik</ID>
+      <Name>Korisnik</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c310c578-ab82-4951-a4f9-d6f3e5636403">
+          <ID>Old ID - Korisnik</ID>
+          <Name>Old ID - Korisnik</Name>
+          <Source dwd:design-time-name="2498c28e-ee3f-486d-bc6c-3b3908b82c55">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="828176e2-0835-4395-b0c2-4ebd6a75d568">
+              <TableID>dbo_Korisnik</TableID>
+              <ColumnID>OldID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="deabee15-1652-4147-8084-1699f9adba55">
+          <ID>Korisnik Count</ID>
+          <Name>Korisnik Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="00b8434e-f275-43ed-8f19-9a1e43e07e06">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="8607ea69-6d35-4626-9f61-1d1b2a30a10c">
+              <TableID>dbo_Korisnik</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="c2b1175a-4721-4df8-b3ec-e048143c17ca">
+          <CubeDimensionID>Korisnik</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="83ab2ba3-6701-4b7f-914d-c4cef8b88942">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a7539b4c-19be-4f4c-a588-580677f970b8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f7149ade-400b-4e04-a693-deb6bb2a2f4b">
+                    <TableID>dbo_Korisnik</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="6ab3898a-6913-4b95-9274-3107ef3f72d7">
+      <ID>Skladiste</ID>
+      <Name>Skladiste</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4cb36a51-56cb-470f-8d8d-981ccf663b8b">
+          <ID>Old ID - Skladiste</ID>
+          <Name>Old ID - Skladiste</Name>
+          <Source dwd:design-time-name="ed74a1da-4cf3-4387-bd23-6c55eae9bb2b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6c95053f-811e-45d8-b5fd-d0f66a235ab3">
+              <TableID>dbo_Skladiste</TableID>
+              <ColumnID>OldID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8c59406b-9992-4f33-84a6-ad01f1b61cb7">
+          <ID>Skladiste Count</ID>
+          <Name>Skladiste Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="37fcf071-6055-4d95-bda8-5d919e85453f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4a4b2b92-a617-450a-a661-3ca3b05eda4d">
+              <TableID>dbo_Skladiste</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="2bec970b-9128-49f9-a6a3-b04134651fa6">
+          <CubeDimensionID>Skladiste</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb582099-7405-4200-88ee-36291148ca08">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cd62d650-80c8-4aeb-acc4-935eb84e90d7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c1a518e5-0419-4647-8afd-95d22813b532">
+                    <TableID>dbo_Skladiste</TableID>
+                    <ColumnID>Id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="d10e837f-f57f-492c-b3ca-370fc455e5f1">
+    <DataSourceViewID>DW Skladista Podataka</DataSourceViewID>
+  </Source>
+</Cube>
