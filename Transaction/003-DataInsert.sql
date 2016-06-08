@@ -2,7 +2,7 @@ USE [SkladistaPodataka]
 GO
 
 insert into [dbo].[Dobavljac]
-				([Ime],[IBAN], [Kontakt])
+				([DobavljacIme],[DobavljacIBAN], [DobavljacKontakt])
 	VALUES
 			('Velpro',	'HR12345678907345',	'test1@mail.com'),
 			('Ledo',	'HR23502209742341',	'test2@mail.com'),
@@ -17,7 +17,7 @@ insert into [dbo].[Dobavljac]
 GO
 
 Insert into [dbo].[Skladiste]
-				([Ime],[Lokacija])
+				([SkladisteIme],[SkladisteLokacija])
 	VALUES
 			('Prvo',	'U hotelu'),
 			('Drugo',	'U rusevini'),
@@ -26,29 +26,29 @@ Insert into [dbo].[Skladiste]
 go
 
 insert into [dbo].[Artikal]
-			([Ime],[FK_IdDobavljac])
+			([ArtikalIme],[FK_IdDobavljac])
 	Values
-			('Coca Cola', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Jamnica', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Jamnica Sensation', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Sprite', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Fanta', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Pipi', (select Id from [dbo].[Dobavljac] where Ime = 'Velpro')),
-			('Sladoled Vanilija', (select Id from [dbo].[Dobavljac] where Ime = 'Ledo')),
-			('Kinder Pingui', (select Id from [dbo].[Dobavljac] where Ime = 'Ledo')),
-			('Snjeguljica', (select Id from [dbo].[Dobavljac] where Ime = 'Ledo')),
-			('King', (select Id from [dbo].[Dobavljac] where Ime = 'Ledo')),
-			('Stol Thorin', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Stolica Makeh', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Sjedalice Inga', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Zavjese Clover', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Pepeljare', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Case Vinske Inge', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA')),
-			('Case Shooteri Texas', (select Id from [dbo].[Dobavljac] where Ime = 'IKEA'))
+			('Coca Cola', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Velpro')),
+			('Jamnica', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Velpro')),
+			('Jamnica Sensation', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Velpro')),
+			('Sprite', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Tommy')),
+			('Fanta', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Konzum')),
+			('Pipi', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Velpro')),
+			('Sladoled Vanilija', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Ledo')),
+			('Kinder Pingui', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Ledo')),
+			('Snjeguljica', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Ledo')),
+			('King', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'Ledo')),
+			('Stol Thorin', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Stolica Makeh', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Sjedalice Inga', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Zavjese Clover', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Pepeljare', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Case Vinske Inge', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA')),
+			('Case Shooteri Texas', (select DobavljacId from [dbo].[Dobavljac] where DobavljacIme = 'IKEA'))
 go
 
 INSERT INTO [dbo].[Kafic]
-           ([Ime],[Lokacija])
+           ([KaficIme],[KaficLokacija])
     VALUES
            ('Maduro','Doli na kraju'),
 		   ('Marina','U sredini'),
@@ -61,7 +61,7 @@ INSERT INTO [dbo].[Kafic]
 GO
 
 insert into [dbo].[Korisnik]
-				([Ime], [Mobitel])
+				([KorisnikIme], [KorisnikMobitel])
 		VALUES
 					('Ante', '091 123 4567'),
 					('Mate', '092 123 4567'),
@@ -74,67 +74,39 @@ insert into [dbo].[Korisnik]
 GO		
 
 insert into [dbo].[ArtikliSkladista]
-				([Kolicina],[MinKolicina],[OptimalnaKolicina],[FK_IdArtikal],[FK_IdSkladiste])
+				([ArtikliSkladistaKolicina],[MinKolicina],[OptimalnaKolicina],[FK_IdArtikal],[FK_IdSkladiste])
 		VALUES		
-					('60','20','100',(select Id from [dbo].[Artikal] where Ime='Coca Cola'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
-					('45','20','100',(select Id from [dbo].[Artikal] where Ime='Pipi'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
-					('21','20','100',(select Id from [dbo].[Artikal] where Ime='Fanta'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
-					('34','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica Sensation'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+					('60','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Coca Cola'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
+					('45','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Pipi'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
+					('21','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Fanta'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
+					('34','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Jamnica Sensation'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
 
-					('40','20','100',(select Id from [dbo].[Artikal] where Ime='Coca Cola'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
-					('67','20','100',(select Id from [dbo].[Artikal] where Ime='Pipi'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
-					('21','20','100',(select Id from [dbo].[Artikal] where Ime='Fanta'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
-					('34','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica Sensation'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+					('40','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Coca Cola'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
+					('67','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Pipi'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
+					('21','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Fanta'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
+					('34','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Jamnica Sensation'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
 
-					('52','20','100',(select Id from [dbo].[Artikal] where Ime='Jamnica'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
-					('10','2','15',(select Id from [dbo].[Artikal] where Ime='Sladoled Vanilija'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
+					('52','20','100',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Jamnica'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Trece')),
+					('10','2','15',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Sladoled Vanilija'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Trece')),
 
 					
-					('52','20','65',(select Id from [dbo].[Artikal] where Ime='Jamnica'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
-					('10','2','15',(select Id from [dbo].[Artikal] where Ime='Sladoled Vanilija'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
-					('10','2','15',(select Id from [dbo].[Artikal] where Ime='King'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto')),
-					('10','5','2',(select Id from [dbo].[Artikal] where Ime='Kinder Pingui'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto'))
+					('52','20','65',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Jamnica'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Cetvrto')),
+					('10','2','15',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Sladoled Vanilija'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Cetvrto')),
+					('10','2','15',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='King'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Cetvrto')),
+					('10','5','2',(select ArtikalId from [dbo].[Artikal] where ArtikalIme='Kinder Pingui'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Cetvrto'))
 GO
 
 insert into [dbo].[NarudzbaZaKafic]
 				([VrijemeKreiranja],[StatusNarudzbe],[VrijemeDostave],[FK_IdKafic],[FK_IdKorisnik],[FK_IdSkladiste])
 		VALUES
-			('2016-02-03 15:10:44', '2','2016-02-07 10:44:02',(select Id from [dbo].[Kafic] where Ime='Marina'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
-			('2016-02-03 15:11:44', '2','2016-02-07 10:44:30',(select Id from [dbo].[Kafic] where Ime='Marina'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
-			('2016-03-03 12:10:44', '2','2016-03-07 14:10:55',(select Id from [dbo].[Kafic] where Ime='East 1'),(select Id from [dbo].[Korisnik] where Ime='Luka'),(select Id from [dbo].[Skladiste] where Ime='Prvo')),
+			('2016-02-03', '2','2016-02-07',(select KaficId from [dbo].[Kafic] where KaficIme='Marina'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Ante'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
+			('2016-02-03', '2','2016-02-07',(select KaficId from [dbo].[Kafic] where KaficIme='Marina'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Ante'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
+			('2016-03-03', '2','2016-03-07',(select KaficId from [dbo].[Kafic] where KaficIme='East 1'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Luka'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Prvo')),
 
-			('2016-03-22 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='Blue'),(select Id from [dbo].[Korisnik] where Ime='Mate'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
-			('2016-02-03 15:10:44', '0','',(select Id from [dbo].[Kafic] where Ime='Salona'),(select Id from [dbo].[Korisnik] where Ime='Josip'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
-			('2016-02-03 15:10:44', '0','',(select Id from [dbo].[Kafic] where Ime='Maduro'),(select Id from [dbo].[Korisnik] where Ime='Ante'),(select Id from [dbo].[Skladiste] where Ime='Drugo')),
+			('2016-03-22', '1','',(select KaficId from [dbo].[Kafic] where KaficIme='Blue'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Mate'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
+			('2016-02-03', '0','',(select KaficId from [dbo].[Kafic] where KaficIme='Salona'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Josip'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
+			('2016-02-03 ', '0','',(select KaficId from [dbo].[Kafic] where KaficIme='Maduro'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Ante'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Drugo')),
 
-			('2016-03-20 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='Salona'),(select Id from [dbo].[Korisnik] where Ime='Marko'),(select Id from [dbo].[Skladiste] where Ime='Trece')),
-			('2016-03-21 15:10:44', '1','',(select Id from [dbo].[Kafic] where Ime='City One'),(select Id from [dbo].[Korisnik] where Ime='Ivan'),(select Id from [dbo].[Skladiste] where Ime='Cetvrto'))
+			('2016-03-20', '1','',(select KaficId from [dbo].[Kafic] where KaficIme='Salona'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Marko'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Trece')),
+			('2016-03-21', '1','',(select KaficId from [dbo].[Kafic] where KaficIme='City One'),(select KorisnikId from [dbo].[Korisnik] where KorisnikIme='Ivan'),(select SkladisteId from [dbo].[Skladiste] where SkladisteIme='Cetvrto'))
 GO
-
-insert into [dbo].[ListaZaNarudzbe]
-	([Kolicina],[FK_IdArtikal],[FK_IdNarudzbaZaKafic])
-	values
-		(5,1,1),
-		(2,3,1),
-		(1,5,1),
-		(4,3,2),
-		(4,6,2),
-		(5,5,3),
-		(3,1,3),
-
-		(5,1,4),
-		(2,6,4),
-		(1,5,4),
-		(4,1,5),
-		(4,6,5),
-		(5,5,6),
-		(3,1,6),
-
-		(5,2,7),
-		(2,7,7),
-
-		(5,2,8),
-		(1,10,8),
-		(2,7,8)
-
-go
